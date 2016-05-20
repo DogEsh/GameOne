@@ -3,13 +3,13 @@
 
 namespace SimpleTeam.GameOne.Message
 {
-    using TypeID = Byte;
+    using MessageID = Byte;
     /**
     <summary> 
     Реестр всех типов сообщений.
     </summary>
     */
-    public enum HelperMessageID : byte//TypeID
+    public enum HelperMessageID : MessageID
     {
         Account,
         Chat,

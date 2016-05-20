@@ -5,14 +5,14 @@ using SimpleTeam.GameOne.Message;
 
 namespace SimpleTeam.GameOne.BinarySerialization
 {
-    using TypeID = Byte;
-    public class PackerAccount : IPackerID
+    using MessageID = Byte;
+    public class PackerAccount : IPackerMessage
     {
-        TypeID ITypeID.Type
+        MessageID IMessageID.Type
         {
             get
             {
-                return (TypeID)HelperMessageID.Account;
+                return (MessageID)HelperMessageID.Account;
             }
         }
         public void CreatePacket(BinaryWriter writer, IMessage message)

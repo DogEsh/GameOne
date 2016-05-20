@@ -7,7 +7,7 @@
     <ProjectGuid>{52AC04A5-09BF-4AF8-8309-FE8E43536DF3}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SimpleTeam</RootNamespace>
+    <RootNamespace>SimpleTeam.GameOne</RootNamespace>
     <AssemblyName>GameOne Server</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -74,8 +74,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Scene\SceneServerGame.cs" />
-    <Compile Include="Scene\SceneServerMenu.cs" />
+    <Compile Include="Scene\Game\SceneServerGame.cs" />
+    <Compile Include="Scene\Game\SceneServerGameMessages.cs" />
+    <Compile Include="Scene\Menu\Handler\MessageHandlerAccount.cs" />
+    <Compile Include="Scene\Menu\Handler\MessageHandlerChat.cs" />
+    <Compile Include="Scene\Menu\SceneServerMenu.cs" />
+    <Compile Include="Scene\Menu\SceneServerMenuMessages.cs" />
     <Compile Include="System\ConsoleCtrl.cs" />
     <Compile Include="Network\NetworkServerMachine.cs" />
     <Compile Include="Main\Program.cs" />

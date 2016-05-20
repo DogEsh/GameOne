@@ -14,7 +14,7 @@
     <packageHasNamedElement>
       <class
         Id="8c646275-4a7c-4a28-875f-2d85f0d4b89b"
-        name="Dictionary&lt;Byte‎, IPackerID‎&gt;"
+        name="Dictionary&lt;Byte‎, IPackerMessage‎&gt;"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -99,7 +99,7 @@
                   <actuals>
                     <interfaceMoniker
                       Id="3947c801-584e-4987-bba6-aaa096fc3c74"
-                      LastKnownName="IPackerID"
+                      LastKnownName="IPackerMessage"
                       LastKnownLocation="Package2_0521.uml" />
                   </actuals>
                   <formal>
@@ -228,7 +228,7 @@
     <packageHasNamedElement>
       <class
         Id="f93f8e27-f06a-4670-bc7f-f54431f3c3d2"
-        name="Dictionary&lt;Byte‎, IUnpackerID‎&gt;"
+        name="Dictionary&lt;Byte‎, IUnpackerMessage‎&gt;"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -313,7 +313,7 @@
                   <actuals>
                     <interfaceMoniker
                       Id="6e031800-0c40-4b73-a232-674f522aa87f"
-                      LastKnownName="IUnpackerID"
+                      LastKnownName="IUnpackerMessage"
                       LastKnownLocation="Package2_0521.uml" />
                   </actuals>
                   <formal>

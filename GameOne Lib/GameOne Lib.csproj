@@ -48,22 +48,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Command\Game\CommandProcessMessageAdapterSceneGame.cs" />
-    <Compile Include="Command\Menu\CommandProcessMessageAdapterSceneMenu.cs" />
-    <Compile Include="Command\Parameter\MessageManager\IParametersMessagesManager.cs" />
-    <Compile Include="Command\Parameter\MessageManager\ParametersMessagesManager.cs" />
-    <Compile Include="Command\Parameter\Main\ParameterMain.cs" />
-    <Compile Include="Command\Parameter\SceneGame\IParametersSceneGame.cs" />
-    <Compile Include="Command\Parameter\SceneGame\ParametersSceneGame.cs" />
-    <Compile Include="Command\Parameter\SceneMenu\IParametersSceneMenu.cs" />
-    <Compile Include="Command\Parameter\AllGameOneParameters.cs" />
+    <Compile Include="Command\CommandSendMessageScene.cs" />
+    <Compile Include="Parameter\MessageManager\IParametersMessagesManager.cs" />
+    <Compile Include="Parameter\MessageManager\ParametersMessagesManager.cs" />
+    <Compile Include="Parameter\Main\ParameterMain.cs" />
+    <Compile Include="Parameter\Scene\Game\IParametersSceneGame.cs" />
+    <Compile Include="Parameter\Scene\Game\ParametersSceneGame.cs" />
+    <Compile Include="Parameter\Scene\Menu\IParametersSceneMenu.cs" />
+    <Compile Include="Parameter\AllGameOneParameters.cs" />
     <Compile Include="BinarySerialization\Packer\Packer.cs" />
     <Compile Include="BinarySerialization\Unpacker\Unpacker.cs" />
-    <Compile Include="Command\Game\CommandProcessMessageGameMap.cs" />
-    <Compile Include="Command\Game\CommandProcessMessageGamerCommand.cs" />
-    <Compile Include="Command\Game\CommandProcessMessageGameState.cs" />
-    <Compile Include="Command\Parameter\SceneMenu\ParametersSceneMenu.cs" />
-    <Compile Include="Command\Parameter\HelperParameterID.cs" />
+    <Compile Include="Parameter\Scene\Menu\ParametersSceneMenu.cs" />
+    <Compile Include="Parameter\HelperParameterID.cs" />
     <Compile Include="GameInfo\GameContainer\GameObjList.cs" />
     <Compile Include="GameInfo\IGameID.cs" />
     <Compile Include="GameInfo\GameContainer\IGameObjContainer.cs" />
@@ -96,26 +92,24 @@
     <Compile Include="Message\MessagesManager\IMessagesManagerNetwork.cs" />
     <Compile Include="Message\MessagesManager\IMessagesManagerScenario.cs" />
     <Compile Include="Message\MessagesManager\MessagesManager.cs" />
-    <Compile Include="Scene\Game\ISceneGame.cs" />
-    <Compile Include="Scene\Menu\ISceneMenu.cs" />
-    <Compile Include="Scene\Game\ISceneGameMessages.cs" />
-    <Compile Include="Command\Menu\CommandProcessMessageAccount.cs" />
-    <Compile Include="Command\Menu\CommandProcessMessageProfile.cs" />
-    <Compile Include="Command\Menu\CommandProcessMessageChat.cs" />
-    <Compile Include="Command\RegisterCommandProcessMessage.cs" />
-    <Compile Include="Command\CommandProcessMessageSmart.cs" />
+    <Compile Include="Parameter\Scene\IParameterSceneMessages.cs" />
+    <Compile Include="Scene\Messages\Handler\IMessageHandler.cs" />
+    <Compile Include="Scene\Messages\Game\ISceneGame.cs" />
+    <Compile Include="Scene\Messages\ISceneMessages.cs" />
+    <Compile Include="Scene\Messages\Menu\ISceneMenu.cs" />
+    <Compile Include="Scene\Messages\Game\ISceneGameMessages.cs" />
     <Compile Include="Command\CommandSendMessageNetwork.cs" />
-    <Compile Include="Command\ICommandProcessMessage.cs" />
-    <Compile Include="Scene\Menu\ISceneMenuMessages.cs" />
-    <Compile Include="Scene\ISceneScenario.cs" />
-    <Compile Include="Scene\SceneScenario.cs" />
+    <Compile Include="Scene\Messages\Menu\ISceneMenuMessages.cs" />
+    <Compile Include="Scene\Messages\SceneMessagesBase.cs" />
+    <Compile Include="Scene\Scenario\ISceneScenario.cs" />
+    <Compile Include="Scene\Scenario\SceneScenario.cs" />
     <Compile Include="Message\Menu\MessageChat.cs" />
     <Compile Include="Message\HelperMessageID.cs" />
     <Compile Include="Message\Menu\MessageProfile.cs" />
     <Compile Include="BinarySerialization\Packer\PackerChat.cs" />
     <Compile Include="BinarySerialization\Packer\PackerProfile.cs" />
-    <Compile Include="BinarySerialization\Unpacker\IUnpackerID.cs" />
-    <Compile Include="BinarySerialization\Packer\IPackerID.cs" />
+    <Compile Include="BinarySerialization\Unpacker\IUnpackerMessage.cs" />
+    <Compile Include="BinarySerialization\Packer\IPackerMessage.cs" />
     <Compile Include="Message\Menu\MessageAccount.cs" />
     <Compile Include="BinarySerialization\Packer\RegisterPacker.cs" />
     <Compile Include="BinarySerialization\Packer\PackerAccount.cs" />
@@ -125,6 +119,7 @@
     <Compile Include="BinarySerialization\Unpacker\UnpackerChat.cs" />
     <Compile Include="BinarySerialization\Unpacker\UnpackerAccount.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

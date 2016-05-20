@@ -20,7 +20,6 @@ namespace SimpleTeam.GameOne.Message.Manager
         private IScenario _scenario;
         private Queue<IMessage> _messagesNetwork;
 
-        private RegisterCommandProcessMessage _registerComm = new RegisterCommandProcessMessage();
 
         public MessagesManager()
         {
@@ -32,7 +31,7 @@ namespace SimpleTeam.GameOne.Message.Manager
         {
             if (message != null)
             {
-                ICommand cs = new CommandProcessMessageSmart(_registerComm, message);
+                ICommand cs = new CommandSendMessageScene(message);
                 _scenario.Set(cs);
             }
         }

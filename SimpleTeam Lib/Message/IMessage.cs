@@ -5,7 +5,9 @@ using System.Text;
 
 namespace SimpleTeam.Message
 {
-    public interface IMessage : ITypeID
+    using ParameterID = Byte;
+    public interface IMessage : IMessageID
     {
+        ParameterID ParameterType { get; }
     }
 }

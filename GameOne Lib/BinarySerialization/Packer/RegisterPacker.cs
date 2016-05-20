@@ -5,7 +5,7 @@ using System.Reflection;
 namespace SimpleTeam.GameOne.BinarySerialization
 {
     
-    using TypeID = Byte;
+    using MessageID = Byte;
     /**
     <summary> 
     Реестр всех упаковщиков сообщений.
@@ -14,16 +14,16 @@ namespace SimpleTeam.GameOne.BinarySerialization
     public class RegisterPacker
     {
 
-        private Dictionary<TypeID, IPackerID> _dictionary;
+        private Dictionary<MessageID, IPackerMessage> _dictionary;
         public RegisterPacker()
         {
             _dictionary = GetDictionary();
         }
-        private Dictionary<TypeID, IPackerID> GetDictionary()
+        private Dictionary<MessageID, IPackerMessage> GetDictionary()
         {
             var assemblyType = typeof(Assembly);
 
-            var packers = new Dictionary<TypeID, IPackerID>();
+            var packers = new Dictionary<MessageID, IPackerMessage>();
             foreach (var type in assemblyType.Assembly.GetTypes())
             {
                 if (!type.IsClass)
@@ -33,9 +33,9 @@ namespace SimpleTeam.GameOne.BinarySerialization
                     continue;
 
 
-                if (typeof(IPackerID).IsAssignableFrom(type))
+                if (typeof(IPackerMessage).IsAssignableFrom(type))
                 {
-                    IPackerID p = Activator.CreateInstance(type) as IPackerID;
+                    IPackerMessage p = Activator.CreateInstance(type) as IPackerMessage;
                     packers.Add(p.Type, p);
                 }
                     
@@ -43,7 +43,7 @@ namespace SimpleTeam.GameOne.BinarySerialization
 
             return packers;
         }
-        public IPackerID  Find(TypeID type)
+        public IPackerMessage  Find(MessageID type)
         {
             if (_dictionary.ContainsKey(type))
                 return _dictionary[type];

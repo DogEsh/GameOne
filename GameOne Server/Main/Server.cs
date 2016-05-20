@@ -2,8 +2,8 @@
 using SimpleTeam.GameOne.Network;
 using SimpleTeam.GameOne.SystemBase;
 using SimpleTeam.Command.Scenario;
-using SimpleTeam.Command;
-using SimpleTeam.GameOne.Command;
+using SimpleTeam.Parameter;
+using SimpleTeam.GameOne.Parameter;
 using SimpleTeam.GameOne.Message.Manager;
 using SimpleTeam.GameOne.Scene;
 using SimpleTeam.Main;

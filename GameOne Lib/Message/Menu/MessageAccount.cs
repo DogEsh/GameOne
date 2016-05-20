@@ -1,27 +1,36 @@
 ﻿using System;
 using SimpleTeam.Message;
-
+using SimpleTeam.GameOne.Parameter;
 namespace SimpleTeam.GameOne.Message
 {
-    using TypeID = Byte;
+    using MessageID = Byte;
+    using ParameterID = Byte;
 
     [Serializable]
     public sealed class MessageAccount : MessageBase
     {
-        public override TypeID Type
+        public override MessageID Type
         {
             get
             {
-                return (TypeID)HelperMessageID.Account;
+                return (MessageID)HelperMessageID.Account;
             }
         }
-        public enum StateType : byte//Byte
+        public override ParameterID ParameterType
+        {
+            get
+            {
+                return (ParameterID)HelperParameterID.SceneMenu;
+            }
+        }
+        public enum StateType : byte
         {
             SignUp = 0,
             SignIn = 1,
             SignOut = 2,
             ChangePassword = 3
         }
+
         /*
         private struct _Flags
         {

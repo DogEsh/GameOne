@@ -251,7 +251,7 @@
         <elementDefinition Id="c7809aba-1ab6-4c95-819f-d36b89532829" />
         <suppliersInternal>
           <interfaceRealization Id="0aedd85b-ea5a-4e2f-b63c-f3a6331c711d">
-            <interfaceMoniker Id="152ccbb9-01c8-4744-88f3-428a2d2c3992" LastKnownName="IPackerID" />
+            <interfaceMoniker Id="152ccbb9-01c8-4744-88f3-428a2d2c3992" LastKnownName="IPackerMessage" />
             <elementDefinition Id="4758ac6a-469b-49ee-9de5-c19ff0be2384" />
           </interfaceRealization>
         </suppliersInternal>
@@ -441,7 +441,7 @@
         <elementDefinition Id="78c12089-f69d-4abf-a649-1fb37308fb60" />
         <suppliersInternal>
           <interfaceRealization Id="acac919e-f611-48f4-9c3e-04f0ce53dfe5">
-            <interfaceMoniker Id="152ccbb9-01c8-4744-88f3-428a2d2c3992" LastKnownName="IPackerID" />
+            <interfaceMoniker Id="152ccbb9-01c8-4744-88f3-428a2d2c3992" LastKnownName="IPackerMessage" />
             <elementDefinition Id="d8fbffb4-bc21-418c-97b4-772e2424f057" />
           </interfaceRealization>
         </suppliersInternal>
@@ -626,7 +626,7 @@
         <elementDefinition Id="5eeb71f5-48a4-4b62-bca7-bae4e09f6b03" />
         <suppliersInternal>
           <interfaceRealization Id="7878f3e0-c807-4bce-aced-0d19c2aa5ecc">
-            <interfaceMoniker Id="152ccbb9-01c8-4744-88f3-428a2d2c3992" LastKnownName="IPackerID" />
+            <interfaceMoniker Id="152ccbb9-01c8-4744-88f3-428a2d2c3992" LastKnownName="IPackerMessage" />
             <elementDefinition Id="d34652d6-2ec1-4939-9555-377f236d732f" />
           </interfaceRealization>
         </suppliersInternal>
@@ -932,7 +932,7 @@
                 <parameter Id="fa0c03a6-3728-4250-b1b7-942b591761d1" direction="Return">
                   <elementDefinition Id="d5c4e3c6-d4f8-46c3-9bbc-44f7bce4998b" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="c4c416b9-396d-472d-abfc-d97d0003d762" LastKnownName="IPackerID" />
+                    <referencedTypeMoniker Id="c4c416b9-396d-472d-abfc-d97d0003d762" LastKnownName="IPackerMessage" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1006,7 +1006,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <packageHasNamedElement>
-      <referencedType Id="c4c416b9-396d-472d-abfc-d97d0003d762" name="IPackerID" isAbstract="false" isLeaf="false" cachedFullName="UML GameOne::SimpleTeam::GameOne::BinarySerialization::IPackerID">
+      <referencedType Id="c4c416b9-396d-472d-abfc-d97d0003d762" name="IPackerMessage" isAbstract="false" isLeaf="false" cachedFullName="UML GameOne::SimpleTeam::GameOne::BinarySerialization::IPackerMessage">
         <elementDefinition Id="3947c801-584e-4987-bba6-aaa096fc3c74" />
       </referencedType>
     </packageHasNamedElement>
@@ -1111,7 +1111,7 @@
                 <parameter Id="26a45717-bb6d-4a11-a107-521fc2a0a851" direction="Return">
                   <elementDefinition Id="d8266667-322e-4738-ad81-a15569ce55fd" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="0c51f8f3-49fe-4006-b520-eaab8765ac64" LastKnownName="IUnpackerID" />
+                    <referencedTypeMoniker Id="0c51f8f3-49fe-4006-b520-eaab8765ac64" LastKnownName="IUnpackerMessage" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1185,7 +1185,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <packageHasNamedElement>
-      <referencedType Id="0c51f8f3-49fe-4006-b520-eaab8765ac64" name="IUnpackerID" isAbstract="false" isLeaf="false" cachedFullName="UML GameOne::SimpleTeam::GameOne::BinarySerialization::IUnpackerID">
+      <referencedType Id="0c51f8f3-49fe-4006-b520-eaab8765ac64" name="IUnpackerMessage" isAbstract="false" isLeaf="false" cachedFullName="UML GameOne::SimpleTeam::GameOne::BinarySerialization::IUnpackerMessage">
         <elementDefinition Id="6e031800-0c40-4b73-a232-674f522aa87f" />
       </referencedType>
     </packageHasNamedElement>
@@ -1428,7 +1428,7 @@
         <elementDefinition Id="eb518424-8817-4db3-92fd-28f5b49c9ad9" />
         <suppliersInternal>
           <interfaceRealization Id="63bec866-17a4-42a3-a346-fb209e4b8f8d">
-            <interfaceMoniker Id="44d6083d-ec8a-4a3c-997c-271338932800" LastKnownName="IUnpackerID" />
+            <interfaceMoniker Id="44d6083d-ec8a-4a3c-997c-271338932800" LastKnownName="IUnpackerMessage" />
             <elementDefinition Id="8e06cbf5-fbc7-4a1f-b6cb-1eb1b8f53704" />
           </interfaceRealization>
         </suppliersInternal>
@@ -1644,7 +1644,7 @@
         <elementDefinition Id="1e2b45b2-7d87-4e65-9777-969a6a62fe27" />
         <suppliersInternal>
           <interfaceRealization Id="c747ac58-79ab-4af3-ab54-edceafe1d45e">
-            <interfaceMoniker Id="44d6083d-ec8a-4a3c-997c-271338932800" LastKnownName="IUnpackerID" />
+            <interfaceMoniker Id="44d6083d-ec8a-4a3c-997c-271338932800" LastKnownName="IUnpackerMessage" />
             <elementDefinition Id="1885da82-b2d4-4fae-a437-fd8ae31de126" />
           </interfaceRealization>
         </suppliersInternal>
@@ -1850,7 +1850,7 @@
         <elementDefinition Id="50c7cf18-4a8c-4071-8bfa-dab40ef64064" />
         <suppliersInternal>
           <interfaceRealization Id="2abca349-7cfe-4ac0-85f0-cd96ad37da93">
-            <interfaceMoniker Id="44d6083d-ec8a-4a3c-997c-271338932800" LastKnownName="IUnpackerID" />
+            <interfaceMoniker Id="44d6083d-ec8a-4a3c-997c-271338932800" LastKnownName="IUnpackerMessage" />
             <elementDefinition Id="bf0235e0-7f4e-478a-8e65-33e433ea2e70" />
           </interfaceRealization>
         </suppliersInternal>
@@ -2010,9 +2010,9 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <Interface Id="152ccbb9-01c8-4744-88f3-428a2d2c3992" name="IPackerID" isAbstract="false" isLeaf="false">
+      <Interface Id="152ccbb9-01c8-4744-88f3-428a2d2c3992" name="IPackerMessage" isAbstract="false" isLeaf="false">
         <referencesInternal>
-          <reference Id="92ef715e-e6eb-43ac-adc1-445032afd888" handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FGameOne Lib.dll&quot; Namespace%3DSimpleTeam.GameOne.BinarySerialization Type%3DIPackerID" tag="ViewCode">
+          <reference Id="92ef715e-e6eb-43ac-adc1-445032afd888" handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FGameOne Lib.dll&quot; Namespace%3DSimpleTeam.GameOne.BinarySerialization Type%3DIPackerMessage" tag="ViewCode">
             <elementDefinition Id="a0b5208d-20e0-416a-8bc4-9a96ec9f08a8" />
           </reference>
         </referencesInternal>
@@ -2051,7 +2051,7 @@
         <ownedOperations>
           <operation Id="c9604a48-aaac-4838-af4a-e586c8c05021" name="CreatePacket" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
             <referencesInternal>
-              <reference Id="bd09a691-0136-4662-b38d-9f17ea67f2fb" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FGameOne Lib.dll&quot; Namespace%3DSimpleTeam.GameOne.BinarySerialization Type%3DIPackerID Member%3D(Name%3DCreatePacket OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv3.5%2FProfile%2FUnity Subset v3.5%2Fmscorlib.dll&quot; Namespace%3DSystem.IO Type%3DBinaryWriter)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FSimpleTeam Lib.dll&quot; Namespace%3DSimpleTeam.Message Type%3DIMessage)])" tag="ViewCode">
+              <reference Id="bd09a691-0136-4662-b38d-9f17ea67f2fb" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FGameOne Lib.dll&quot; Namespace%3DSimpleTeam.GameOne.BinarySerialization Type%3DIPackerMessage Member%3D(Name%3DCreatePacket OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv3.5%2FProfile%2FUnity Subset v3.5%2Fmscorlib.dll&quot; Namespace%3DSystem.IO Type%3DBinaryWriter)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FSimpleTeam Lib.dll&quot; Namespace%3DSimpleTeam.Message Type%3DIMessage)])" tag="ViewCode">
                 <elementDefinition Id="f22a877f-7cc1-4abf-9cf1-e1678d428f97" />
               </reference>
             </referencesInternal>
@@ -2103,7 +2103,7 @@
               <operationHasOwnedParameters>
                 <parameter Id="34ee163b-68e6-4867-be90-06ec24d66380" name="writer" direction="In">
                   <referencesInternal>
-                    <reference Id="72b06b76-b817-4e6e-bac0-7d9b43fec9bf" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FGameOne Lib.dll&quot; Namespace%3DSimpleTeam.GameOne.BinarySerialization Type%3DIPackerID Member%3D(Name%3DCreatePacket OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv3.5%2FProfile%2FUnity Subset v3.5%2Fmscorlib.dll&quot; Namespace%3DSystem.IO Type%3DBinaryWriter)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FSimpleTeam Lib.dll&quot; Namespace%3DSimpleTeam.Message Type%3DIMessage)]) ParameterIdentifier%3Dwriter" tag="ViewCode">
+                    <reference Id="72b06b76-b817-4e6e-bac0-7d9b43fec9bf" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FGameOne Lib.dll&quot; Namespace%3DSimpleTeam.GameOne.BinarySerialization Type%3DIPackerMessage Member%3D(Name%3DCreatePacket OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv3.5%2FProfile%2FUnity Subset v3.5%2Fmscorlib.dll&quot; Namespace%3DSystem.IO Type%3DBinaryWriter)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FSimpleTeam Lib.dll&quot; Namespace%3DSimpleTeam.Message Type%3DIMessage)]) ParameterIdentifier%3Dwriter" tag="ViewCode">
                       <elementDefinition Id="7b234a4a-0351-4391-873b-8bfbf160c939" />
                     </reference>
                   </referencesInternal>
@@ -2116,7 +2116,7 @@
               <operationHasOwnedParameters>
                 <parameter Id="05dedf92-4501-466b-bacf-bf981d17718f" name="message" direction="In">
                   <referencesInternal>
-                    <reference Id="0f1c68f0-8c22-4a8d-85e1-11ea838c8af6" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FGameOne Lib.dll&quot; Namespace%3DSimpleTeam.GameOne.BinarySerialization Type%3DIPackerID Member%3D(Name%3DCreatePacket OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv3.5%2FProfile%2FUnity Subset v3.5%2Fmscorlib.dll&quot; Namespace%3DSystem.IO Type%3DBinaryWriter)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FSimpleTeam Lib.dll&quot; Namespace%3DSimpleTeam.Message Type%3DIMessage)]) ParameterIdentifier%3Dmessage" tag="ViewCode">
+                    <reference Id="0f1c68f0-8c22-4a8d-85e1-11ea838c8af6" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FGameOne Lib.dll&quot; Namespace%3DSimpleTeam.GameOne.BinarySerialization Type%3DIPackerMessage Member%3D(Name%3DCreatePacket OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv3.5%2FProfile%2FUnity Subset v3.5%2Fmscorlib.dll&quot; Namespace%3DSystem.IO Type%3DBinaryWriter)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FSimpleTeam Lib.dll&quot; Namespace%3DSimpleTeam.Message Type%3DIMessage)]) ParameterIdentifier%3Dmessage" tag="ViewCode">
                       <elementDefinition Id="3c45a854-91e0-4862-ae07-d6a6612fdf96" />
                     </reference>
                   </referencesInternal>
@@ -2132,9 +2132,9 @@
       </Interface>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <Interface Id="44d6083d-ec8a-4a3c-997c-271338932800" name="IUnpackerID" isAbstract="false" isLeaf="false">
+      <Interface Id="44d6083d-ec8a-4a3c-997c-271338932800" name="IUnpackerMessage" isAbstract="false" isLeaf="false">
         <referencesInternal>
-          <reference Id="0272e7be-6db3-4cc0-9129-e64fde9bb123" handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FGameOne Lib.dll&quot; Namespace%3DSimpleTeam.GameOne.BinarySerialization Type%3DIUnpackerID" tag="ViewCode">
+          <reference Id="0272e7be-6db3-4cc0-9129-e64fde9bb123" handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FGameOne Lib.dll&quot; Namespace%3DSimpleTeam.GameOne.BinarySerialization Type%3DIUnpackerMessage" tag="ViewCode">
             <elementDefinition Id="84a42f44-a7dd-4cd0-8d73-be434327e6a1" />
           </reference>
         </referencesInternal>
@@ -2173,7 +2173,7 @@
         <ownedOperations>
           <operation Id="c40ce742-fe66-4f3a-8e3f-7593e8ae0365" name="CreateMessage" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
             <referencesInternal>
-              <reference Id="a84f9d6e-1324-4dbf-9075-6a1de626572c" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FGameOne Lib.dll&quot; Namespace%3DSimpleTeam.GameOne.BinarySerialization Type%3DIUnpackerID Member%3D(Name%3DCreateMessage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FSimpleTeam Lib.dll&quot; Namespace%3DSimpleTeam.Message Type%3DIMessage ParamKind%3DRef)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv3.5%2FProfile%2FUnity Subset v3.5%2Fmscorlib.dll&quot; Namespace%3DSystem.IO Type%3DBinaryReader)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv3.5%2FProfile%2FUnity Subset v3.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DUInt16)])" tag="ViewCode">
+              <reference Id="a84f9d6e-1324-4dbf-9075-6a1de626572c" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FGameOne Lib.dll&quot; Namespace%3DSimpleTeam.GameOne.BinarySerialization Type%3DIUnpackerMessage Member%3D(Name%3DCreateMessage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FSimpleTeam Lib.dll&quot; Namespace%3DSimpleTeam.Message Type%3DIMessage ParamKind%3DRef)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv3.5%2FProfile%2FUnity Subset v3.5%2Fmscorlib.dll&quot; Namespace%3DSystem.IO Type%3DBinaryReader)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv3.5%2FProfile%2FUnity Subset v3.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DUInt16)])" tag="ViewCode">
                 <elementDefinition Id="f3d4abe2-a936-4320-b4aa-a933802f04ff" />
               </reference>
             </referencesInternal>
@@ -2233,7 +2233,7 @@
               <operationHasOwnedParameters>
                 <parameter Id="a8e10f63-a944-4a07-9477-10a781af6ecd" name="message" direction="InOut">
                   <referencesInternal>
-                    <reference Id="df333891-5978-47fd-9ffd-bcd87f6570cc" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FGameOne Lib.dll&quot; Namespace%3DSimpleTeam.GameOne.BinarySerialization Type%3DIUnpackerID Member%3D(Name%3DCreateMessage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FSimpleTeam Lib.dll&quot; Namespace%3DSimpleTeam.Message Type%3DIMessage ParamKind%3DRef)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv3.5%2FProfile%2FUnity Subset v3.5%2Fmscorlib.dll&quot; Namespace%3DSystem.IO Type%3DBinaryReader)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv3.5%2FProfile%2FUnity Subset v3.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DUInt16)]) ParameterIdentifier%3Dmessage" tag="ViewCode">
+                    <reference Id="df333891-5978-47fd-9ffd-bcd87f6570cc" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FGameOne Lib.dll&quot; Namespace%3DSimpleTeam.GameOne.BinarySerialization Type%3DIUnpackerMessage Member%3D(Name%3DCreateMessage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FSimpleTeam Lib.dll&quot; Namespace%3DSimpleTeam.Message Type%3DIMessage ParamKind%3DRef)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv3.5%2FProfile%2FUnity Subset v3.5%2Fmscorlib.dll&quot; Namespace%3DSystem.IO Type%3DBinaryReader)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv3.5%2FProfile%2FUnity Subset v3.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DUInt16)]) ParameterIdentifier%3Dmessage" tag="ViewCode">
                       <elementDefinition Id="48b36e20-1878-4a58-ad65-74d6cf2dd4fd" />
                     </reference>
                   </referencesInternal>
@@ -2246,7 +2246,7 @@
               <operationHasOwnedParameters>
                 <parameter Id="72bc4fcb-20b7-41de-bf98-d0c8a0c75049" name="reader" direction="In">
                   <referencesInternal>
-                    <reference Id="ff4fbce0-ad4b-499c-81ee-3db98872d124" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FGameOne Lib.dll&quot; Namespace%3DSimpleTeam.GameOne.BinarySerialization Type%3DIUnpackerID Member%3D(Name%3DCreateMessage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FSimpleTeam Lib.dll&quot; Namespace%3DSimpleTeam.Message Type%3DIMessage ParamKind%3DRef)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv3.5%2FProfile%2FUnity Subset v3.5%2Fmscorlib.dll&quot; Namespace%3DSystem.IO Type%3DBinaryReader)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv3.5%2FProfile%2FUnity Subset v3.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DUInt16)]) ParameterIdentifier%3Dreader" tag="ViewCode">
+                    <reference Id="ff4fbce0-ad4b-499c-81ee-3db98872d124" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FGameOne Lib.dll&quot; Namespace%3DSimpleTeam.GameOne.BinarySerialization Type%3DIUnpackerMessage Member%3D(Name%3DCreateMessage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FSimpleTeam Lib.dll&quot; Namespace%3DSimpleTeam.Message Type%3DIMessage ParamKind%3DRef)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv3.5%2FProfile%2FUnity Subset v3.5%2Fmscorlib.dll&quot; Namespace%3DSystem.IO Type%3DBinaryReader)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv3.5%2FProfile%2FUnity Subset v3.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DUInt16)]) ParameterIdentifier%3Dreader" tag="ViewCode">
                       <elementDefinition Id="846cbd78-79e9-4e2d-920e-c7eef30cb26a" />
                     </reference>
                   </referencesInternal>
@@ -2259,7 +2259,7 @@
               <operationHasOwnedParameters>
                 <parameter Id="b9299b3d-992f-4b6b-96bc-f6e27c88c744" name="size" direction="In">
                   <referencesInternal>
-                    <reference Id="f92a51b7-f2f5-4d07-bb29-ea03cf63fd04" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FGameOne Lib.dll&quot; Namespace%3DSimpleTeam.GameOne.BinarySerialization Type%3DIUnpackerID Member%3D(Name%3DCreateMessage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FSimpleTeam Lib.dll&quot; Namespace%3DSimpleTeam.Message Type%3DIMessage ParamKind%3DRef)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv3.5%2FProfile%2FUnity Subset v3.5%2Fmscorlib.dll&quot; Namespace%3DSystem.IO Type%3DBinaryReader)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv3.5%2FProfile%2FUnity Subset v3.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DUInt16)]) ParameterIdentifier%3Dsize" tag="ViewCode">
+                    <reference Id="f92a51b7-f2f5-4d07-bb29-ea03cf63fd04" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FGameOne Lib.dll&quot; Namespace%3DSimpleTeam.GameOne.BinarySerialization Type%3DIUnpackerMessage Member%3D(Name%3DCreateMessage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fvladlen%2FDocuments%2FVisual Studio 2015%2FProjects%2FC Sharp%2FGameOne%2FGameOne Client%2FAssets%2FSimpleTeam Lib.dll&quot; Namespace%3DSimpleTeam.Message Type%3DIMessage ParamKind%3DRef)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv3.5%2FProfile%2FUnity Subset v3.5%2Fmscorlib.dll&quot; Namespace%3DSystem.IO Type%3DBinaryReader)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv3.5%2FProfile%2FUnity Subset v3.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DUInt16)]) ParameterIdentifier%3Dsize" tag="ViewCode">
                       <elementDefinition Id="1074daa3-d0ad-49c3-a856-6ccd4854693f" />
                     </reference>
                   </referencesInternal>

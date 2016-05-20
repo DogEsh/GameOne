@@ -28,7 +28,7 @@ namespace SimpleTeam.GameOne.BinarySerialization
                 {
                     writer.Write(size);
                     writer.Write(message.Type);
-                    IPackerID packer = _register.Find(message.Type);
+                    IPackerMessage packer = _register.Find(message.Type);
                     if (packer == null) return;
                     packer.CreatePacket(writer, message);
                     size = (SizePacket)(stream.Length - sizeof(SizePacket));

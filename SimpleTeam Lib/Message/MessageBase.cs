@@ -4,6 +4,8 @@ using System;
 
 namespace SimpleTeam.Message
 {
+    using MessageID = Byte;
+    using ParameterID = Byte;
     /**
     <summary>
     Хранит список юзеров от кого отправлено\кому отправить сообщение.
@@ -12,7 +14,8 @@ namespace SimpleTeam.Message
     [Serializable]
     public abstract class MessageBase : IMessage
     {
-        public abstract byte Type { get; }
+        public abstract MessageID Type { get; }
+        public abstract ParameterID ParameterType { get; }
         [NonSerialized] public List<IUserNetwork> Users;
         protected MessageBase()
         {

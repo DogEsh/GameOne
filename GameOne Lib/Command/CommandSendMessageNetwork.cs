@@ -1,11 +1,13 @@
 ﻿using SimpleTeam.Message;
 using SimpleTeam.Command;
 using System;
+using SimpleTeam.GameOne.Parameter;
+using SimpleTeam.Parameter;
 
 namespace SimpleTeam.GameOne.Command
 {
     
-    using TypeID = Byte;
+    using ParameterID = Byte;
     /**
     <summary>
     Команда для отправки сообщения в интернет.
@@ -13,11 +15,11 @@ namespace SimpleTeam.GameOne.Command
     */
     public class CommandSendMessageNetwork : ICommand
     {
-        public TypeID Type
+        public ParameterID DestinationType
         {
             get
             {
-                return (TypeID)HelperParameterID.MessageManager;
+                return (ParameterID)HelperParameterID.MessageManager;
             }
         }
 
@@ -29,7 +31,7 @@ namespace SimpleTeam.GameOne.Command
 
         void ICommand.Do(IAllParameters parameters)
         {
-            IParameterMessagesManager p = parameters.GetParameter(Type) as IParameterMessagesManager;
+            IParameterMessagesManager p = parameters.GetParameter(DestinationType) as IParameterMessagesManager;
             if (p != null)
             {
                 p.GetMessagesManager().SetMessage(_message);

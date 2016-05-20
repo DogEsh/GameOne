@@ -7,7 +7,6 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace SimpleTeam.GameOne.Main
 {
-    using TypeID = Byte;
 
     /**
     <summary> 

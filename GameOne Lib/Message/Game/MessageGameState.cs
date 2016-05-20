@@ -1,18 +1,26 @@
 ﻿using System;
 using SimpleTeam.Message;
+using SimpleTeam.GameOne.Parameter;
 
 namespace SimpleTeam.GameOne.Message
 {
-    using TypeID = Byte;
-
+    using MessageID = Byte;
+    using ParameterID = Byte;
     [Serializable]
     public sealed class MessageGameState : MessageBase
     {
-        public override TypeID Type
+        public override MessageID Type
         {
             get
             {
-                return (TypeID)HelperMessageID.GameState;
+                return (MessageID)HelperMessageID.GameState;
+            }
+        }
+        public override ParameterID ParameterType
+        {
+            get
+            {
+                return (ParameterID)HelperParameterID.SceneGame;
             }
         }
     }

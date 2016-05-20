@@ -8,14 +8,14 @@ using SimpleTeam.BinarySerialization;
 namespace SimpleTeam.GameOne.BinarySerialization
 {
     using SizePacket = UInt16;
-    using TypeID = Byte;
-    public class UnpackerAccount: IUnpackerID
+    using MessageID = Byte;
+    public class UnpackerAccount: IUnpackerMessage
     {
-        TypeID ITypeID.Type
+        MessageID IMessageID.Type
         {
             get
             {
-                return (TypeID)HelperMessageID.Account;
+                return (MessageID)HelperMessageID.Account;
             }
         }
         public UnpackerState CreateMessage(ref IMessage message, BinaryReader reader, SizePacket size)

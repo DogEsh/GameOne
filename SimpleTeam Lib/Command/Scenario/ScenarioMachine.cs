@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading;
 using SimpleTeam.SystemBase;
-using SimpleTeam.Command.Scenario;
-using SimpleTeam.Command;
+using SimpleTeam.Parameter;
 
 namespace SimpleTeam.Command.Scenario
 {
