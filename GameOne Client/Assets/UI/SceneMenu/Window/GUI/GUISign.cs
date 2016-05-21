@@ -5,10 +5,12 @@ using SimpleTeam.Command;
 using SimpleTeam.GameOne.Message;
 using SimpleTeam.Command.Scenario;
 using SimpleTeam.GameOne.Command;
+using System;
 
 namespace SimpleTeam.GameOne.Scene
 {
-    public class GUISign : MonoBehaviour, IGUISign
+    using MessageID = Byte;
+    public class GUISign : MonoBehaviour, IMessageHandler
     {
         public SceneClientMenu Menu;
         public IMessageContainer _container = new MessageContainer();
@@ -29,6 +31,19 @@ namespace SimpleTeam.GameOne.Scene
         public InputField InputPassword;
 
         public Text TextInfo;
+
+        public byte Type
+        {
+            get
+            {
+                return (MessageID)HelperMessageID.Account;
+            }
+        }
+        public void SetMessage(IMessage message)
+        {
+            _container.Set(message);
+        }
+
         public void SetState(MessageAccount.StateType state)
         {
             if (state == MessageAccount.StateType.SignIn)
@@ -138,9 +153,7 @@ namespace SimpleTeam.GameOne.Scene
                 Menu.SetStateSignIn(!m.Success);
             }
         }
-        public void Set(MessageAccount message)
-        {
-            _container.Set(message);
-        }
+
+       
     }
 }

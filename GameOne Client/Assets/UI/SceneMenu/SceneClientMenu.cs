@@ -21,7 +21,12 @@ namespace SimpleTeam.GameOne.Scene
             return ((ISceneScenario)_sceneScenario).GetScenario();
         }
 
-
+        //ISceneMessages
+        private SceneMessages _sceneMessages = new SceneMessages();
+        public void SetMessage(IMessage message)
+        {
+            _sceneMessages.SetMessage(message);
+        }
 
         private bool _isSignIn = false;
 
@@ -35,27 +40,15 @@ namespace SimpleTeam.GameOne.Scene
         public void Start()
         {
             SetStateSignIn(false);
+            _sceneMessages.Add(Chat);
+            _sceneMessages.Add(Sign);
+            _sceneMessages.Add(Profile);
         }
         public void Update()
         {
         }
 
 
-        //ISceneMenuMessages
-        void ISceneMenuMessages.SetMessage(MessageChat message)
-        {
-            Chat.Set(message);
-        }
-
-        void ISceneMenuMessages.SetMessage(MessageAccount message)
-        {
-            Sign.Set(message);
-        }
-
-        void ISceneMenuMessages.SetMessage(MessageProfile message)
-        {
-            Profile.Set(message);
-        }
 
 
     }

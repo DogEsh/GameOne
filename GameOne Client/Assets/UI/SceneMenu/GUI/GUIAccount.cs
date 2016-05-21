@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using SimpleTeam.Message;
 using SimpleTeam.GameOne.Message;
+using System;
 
 namespace SimpleTeam.GameOne.Scene
 {
@@ -58,6 +59,7 @@ namespace SimpleTeam.GameOne.Scene
         {
             OpenWindow(MessageAccount.StateType.ChangePassword);
         }
+
     }
 }
 

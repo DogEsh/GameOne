@@ -9,12 +9,12 @@ using SimpleTeam.Command.Scenario;
 
 namespace SimpleTeam.GameOne.Scene
 {
-    class SceneServerMenuMessages : SceneMessagesBase
+    class SceneServerMenuMessages : SceneMessages
     {
         public SceneServerMenuMessages(IScenario scenario)
         {
-            _handlers.Add(new MessageHandlerAccount(scenario));
-            _handlers.Add(new MessageHandlerChat(scenario));
+            base.Add(new MessageHandlerAccount(scenario));
+            base.Add(new MessageHandlerChat(scenario));
         }
 
     }

@@ -2,7 +2,7 @@
 
 namespace SimpleTeam.GameOne.Scene
 {
-    class SceneServerGameMessages : SceneMessagesBase
+    class SceneServerGameMessages : SceneMessages
     {
 
     }

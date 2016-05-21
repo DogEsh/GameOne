@@ -8,7 +8,8 @@ using SimpleTeam.GameOne.Message;
 
 namespace SimpleTeam.GameOne.Scene
 {
-    public class GUIProfile : MonoBehaviour
+    using MessageID = Byte;
+    public class GUIProfile : MonoBehaviour, IMessageHandler
     {
         public GameObject ObjNick;
         public GameObject ObjHonor;
@@ -19,11 +20,17 @@ namespace SimpleTeam.GameOne.Scene
 
         private IUserProfile _profile;
 
+        public byte Type
+        {
+            get
+            {
+                return (MessageID)HelperMessageID.Profile;
+            }
+        }
 
-        public void Set(MessageProfile message)
+        public void SetMessage(IMessage message)
         {
             _container.Set(message);
-
         }
 
         void Update()
@@ -67,6 +74,7 @@ namespace SimpleTeam.GameOne.Scene
             ObjNick.SetActive(false);
             TextNick.text = string.Empty;
         }
-        
+
+       
     }
 }

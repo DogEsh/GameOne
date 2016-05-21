@@ -4,10 +4,10 @@ using SimpleTeam.Message;
 
 namespace SimpleTeam.GameOne.Scene
 {
-    public abstract class SceneMessagesBase : ISceneMessages
+    public class SceneMessages : ISceneMessages
     {
-        protected List<IMessageHandler> _handlers;
-        protected SceneMessagesBase()
+        private List<IMessageHandler> _handlers;
+        public SceneMessages()
         {
             _handlers = new List<IMessageHandler>();
         }
@@ -21,6 +21,10 @@ namespace SimpleTeam.GameOne.Scene
                     h.SetMessage(message);
                 }
             }
+        }
+        public void Add(IMessageHandler handler)
+        {
+            _handlers.Add(handler);
         }
     }
 }

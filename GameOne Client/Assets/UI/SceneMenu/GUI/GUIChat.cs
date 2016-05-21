@@ -4,16 +4,31 @@ using SimpleTeam.Message;
 using SimpleTeam.Command;
 using SimpleTeam.GameOne.Message;
 using SimpleTeam.GameOne.Command;
+using System;
 
 namespace SimpleTeam.GameOne.Scene
 {
-    public class GUIChat : MonoBehaviour
+    using MessageID = Byte;
+    public class GUIChat : MonoBehaviour, IMessageHandler
     {
         public SceneClientMenu Menu;
         public Button ButtonSend;
         public InputField InputChat;
         public Text OutputChat;
         public IMessageContainer _container = new MessageContainer();
+
+        public MessageID Type
+        {
+            get
+            {
+                return (MessageID)HelperMessageID.Chat;
+            }
+        }
+        public void SetMessage(IMessage message)
+        {
+            _container.Set(message);
+        }
+
         // Use this for initialization
         void Start()
         {
@@ -41,10 +56,8 @@ namespace SimpleTeam.GameOne.Scene
             ICommand cmd = new CommandSendMessageNetwork(msg);
             Menu.GetScenario().Set(cmd);
         }
-        public void Set(MessageChat message)
-        {
-            _container.Set(message);
-        }
+
+        
     }
 }
 
