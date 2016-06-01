@@ -39,20 +39,12 @@ namespace SimpleTeam.GameOne.Message
             {
                 return _nick;
             }
-            set
-            {
-                _nick = value;
-            }
         }
         public UInt32 Honor
         {
             get
             {
                 return _honor;
-            }
-            set
-            {
-                _honor = value;
             }
         }
     }

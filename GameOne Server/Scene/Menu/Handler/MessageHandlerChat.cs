@@ -28,12 +28,12 @@ namespace SimpleTeam.GameOne.Scene
         public void SetMessage(IMessage m)
         {
             MessageChat message = m as MessageChat;
+          
             IUserProfile user = message.Users[0] as IUserProfile;
             //if (user.Nick == String.Empty) return;
-
-            message.Line = DateTime.Now.ToString("T") + "  <<" + user.Nick + ">>:  " + message.Line;
-            message.Users.Clear();
-            ICommand c = new CommandSendMessageNetwork(message);
+            String tmp = DateTime.Now.ToString("T") + "  <<" + user.Nick + ">>:  " + message.Line;
+            MessageChat msg = new MessageChat(tmp);
+            ICommand c = new CommandSendMessageNetwork(msg);
             _scenario.Set(c);
         }
     }

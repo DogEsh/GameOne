@@ -107,11 +107,6 @@ namespace SimpleTeam.GameOne.Message
                 //return (StateType)_state.Flags.Type;
                 return (StateType)_state;
             }
-            set
-            {
-                //_state.Flags.Type = (Byte)value;
-                _state = (Byte)value;
-            }
         }
         public bool Success
         {
@@ -120,21 +115,12 @@ namespace SimpleTeam.GameOne.Message
                 return _success;
                 //return _state.Flags.Success;
             }
-            set
-            {
-                _success = value;
-                //_state.Flags.Success = value;
-            }
         }
         public string Email
         {
             get
             {
                 return _email;
-            }
-            set
-            {
-                _email = value;
             }
         }
         public string Nick
@@ -143,20 +129,12 @@ namespace SimpleTeam.GameOne.Message
             {
                 return _nick;
             }
-            set
-            {
-                _nick = value;
-            }
         }
         public string Password
         {
             get
             {
                 return _password;
-            }
-            set
-            {
-                _password = value;
             }
         }
     }

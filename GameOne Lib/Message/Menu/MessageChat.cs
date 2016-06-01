@@ -23,10 +23,17 @@ namespace SimpleTeam.GameOne.Message
                 return (ParameterID)HelperParameterID.SceneMenu;
             }
         }
-        public string Line;
+        private string _line;
         public MessageChat(String line)
         {
-            Line = line;
+            _line = line;
+        }
+        public String Line
+        {
+            get
+            {
+                return _line;
+            }
         }
     };
 }
