@@ -9,9 +9,9 @@ using SimpleTeam.GameOne.Command;
 namespace SimpleTeam.GameOne.Scene
 {
     using MessageID = Byte;
-    class MessageHandlerChat : IMessageHandler
+    class MessageHandlerChat : MessageHandlerBase
     {
-        public byte Type
+        public override byte Type
         {
             get
             {
@@ -19,22 +19,20 @@ namespace SimpleTeam.GameOne.Scene
             }
         }
         
-        IScenario _scenario;
-        public MessageHandlerChat(IScenario scenario)
+        public MessageHandlerChat(IScenario scenario) : base(scenario)
         {
-            _scenario = scenario;
         }
 
-        public void SetMessage(IMessage m)
+        public override void SetMessage(IMessage message)
         {
-            MessageChat message = m as MessageChat;
+            MessageDataChat data = message.Data as MessageDataChat;
           
-            IUserProfile user = message.Users[0] as IUserProfile;
+            IUserProfile user = message.Address.Users[0] as IUserProfile;
             //if (user.Nick == String.Empty) return;
-            String tmp = DateTime.Now.ToString("T") + "  <<" + user.Nick + ">>:  " + message.Line;
-            MessageChat msg = new MessageChat(tmp);
-            ICommand c = new CommandSendMessageNetwork(msg);
-            _scenario.Set(c);
+            String tmp = DateTime.Now.ToString("T") + "  <<" + user.Nick + ">>:  " + data.Line;
+            MessageDataChat d = new MessageDataChat(tmp);
+            SendToNetwork(d);
+
         }
     }
 }

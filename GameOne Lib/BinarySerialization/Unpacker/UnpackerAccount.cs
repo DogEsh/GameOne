@@ -18,7 +18,7 @@ namespace SimpleTeam.GameOne.BinarySerialization
                 return (MessageID)HelperMessageID.Account;
             }
         }
-        public UnpackerState CreateMessage(ref IMessage message, BinaryReader reader, SizePacket size)
+        public UnpackerState CreateMessageData(ref IMessageData message, BinaryReader reader, SizePacket size)
         {
             bool success = reader.ReadBoolean();
             if (reader.BaseStream.Position >= size) return UnpackerState.SizeOut;
@@ -32,7 +32,9 @@ namespace SimpleTeam.GameOne.BinarySerialization
             if (reader.BaseStream.Position >= size) return UnpackerState.SizeOut;
             String nick = reader.ReadString();
             if (reader.BaseStream.Position != size) return UnpackerState.SizeOut;
-            message = new MessageAccount(email, password, nick, success, type);//value);
+            IMessageData d = new MessageDataAccount(email, password, nick, success, type);
+
+            message = new MessageDataAccount(email, password, nick, success, type);//value);
             return UnpackerState.Ok;
         }
         

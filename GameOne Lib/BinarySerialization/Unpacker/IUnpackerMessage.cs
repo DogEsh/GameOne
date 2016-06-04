@@ -10,6 +10,6 @@ namespace SimpleTeam.GameOne.BinarySerialization
 
     public interface IUnpackerMessage : IMessageID
     {
-        UnpackerState CreateMessage(ref IMessage message, BinaryReader reader, SizePacket size);
+        UnpackerState CreateMessageData(ref IMessageData message, BinaryReader reader, SizePacket size);
     }
 }

@@ -15,9 +15,9 @@ namespace SimpleTeam.GameOne.BinarySerialization
                 return (MessageID)HelperMessageID.Chat;
             }
         }
-        public void CreatePacket(BinaryWriter writer, IMessage message)
+        public void CreatePacket(BinaryWriter writer, IMessageData message)
         {
-            MessageChat m = (MessageChat)message;
+            MessageDataChat m = (MessageDataChat)message;
             writer.Write(m.Line);
         }
         public PackerChat()

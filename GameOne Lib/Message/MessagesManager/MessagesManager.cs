@@ -48,7 +48,7 @@ namespace SimpleTeam.GameOne.Message.Manager
                 }
                 return m;
             }
-        }
+        } 
 
         void IMessagesManagerScenario.SetMessage(IMessage message)
         {

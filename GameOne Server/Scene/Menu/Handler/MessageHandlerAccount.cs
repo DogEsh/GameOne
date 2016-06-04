@@ -10,9 +10,9 @@ using SimpleTeam.GameOne.Data;
 namespace SimpleTeam.GameOne.Scene
 {
     using MessageID = Byte;
-    class MessageHandlerAccount : IMessageHandler
+    class MessageHandlerAccount : MessageHandlerBase
     {
-        public byte Type
+        public override byte Type
         {
             get
             {
@@ -21,54 +21,49 @@ namespace SimpleTeam.GameOne.Scene
         }
 
         DataSet _data;
-        IScenario _scenario;
-        public MessageHandlerAccount(IScenario scenario)
+        
+        public MessageHandlerAccount(IScenario scenario) : base(scenario)
         {
-            _scenario = scenario;
             _data = new DataSet();
         }
 
-        public void SetMessage(IMessage m)
+        public override void SetMessage(IMessage message)
         {
-            MessageAccount message = m as MessageAccount;
+            MessageDataAccount data = message.Data as MessageDataAccount;
             bool success = false;
-            UserClient user = message.Users[0] as UserClient;
-            if (message.State == MessageAccount.StateType.SignUp)
+            UserClient user = message.Address.Users[0] as UserClient;
+            if (data.State == MessageDataAccount.StateType.SignUp)
             {
-                success = _data.SignUp(message.Email, message.Password, message.Nick);
+                success = _data.SignUp(data.Email, data.Password, data.Nick);
 
             }
-            else if (message.State == MessageAccount.StateType.SignIn)
+            else if (data.State == MessageDataAccount.StateType.SignIn)
             {
-                IUserProfile p = _data.SignIn(message.Email, message.Password);
+                IUserProfile p = _data.SignIn(data.Email, data.Password);
                 if (p != null)
                 {
                     success = true;
                     user.UpdateProfile(p);
 
-                    MessageProfile mm = new MessageProfile(user.Nick, 0);
-                    mm.Users.Add(message.Users[0]);
-                    ICommand cc = new CommandSendMessageNetwork(mm);
-                    _scenario.Set(cc);
+                    MessageDataProfile dd = new MessageDataProfile(user.Nick, 0);
+                    SendToNetwork(dd, message.Address);
                 }
             }
-            else if (message.State == MessageAccount.StateType.SignOut)
+            else if (data.State == MessageDataAccount.StateType.SignOut)
             {
                 success = true;
                 user.Nick = string.Empty;
             }
-            else if (message.State == MessageAccount.StateType.ChangePassword)
+            else if (data.State == MessageDataAccount.StateType.ChangePassword)
             {
                 if (user.Nick != null)
                 {
-                    _data.UpdatePassword(user.Nick, message.Password);
+                    _data.UpdatePassword(user.Nick, data.Password);
                     success = true;
                 }
             }
-            MessageAccount ms = new MessageAccount(message.State, success);
-            ms.Users.Add(message.Users[0]);
-            ICommand c = new CommandSendMessageNetwork(ms);
-            _scenario.Set(c);
+            MessageDataAccount ddd = new MessageDataAccount(data.State, success);
+            SendToNetwork(ddd, message.Address);
         }
     }
 }

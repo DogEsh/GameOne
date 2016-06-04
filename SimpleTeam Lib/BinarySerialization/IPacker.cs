@@ -6,6 +6,6 @@ namespace SimpleTeam.BinarySerialization
 {
     public interface IPacker
     {
-        void CreatePacket(ref Packet packet, IMessage message);
+        void CreatePacket(ref Packet packet, IMessageData message);
     }
 }

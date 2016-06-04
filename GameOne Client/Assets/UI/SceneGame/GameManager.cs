@@ -50,7 +50,7 @@ namespace SimpleTeam.GameOne.Scene
             UpdateLink();
         }
 
-        public void SetMap(MessageGameMap message)
+        public void SetMap(MessageDataGameMap message)
         {
             
             //depending on what type of message either call

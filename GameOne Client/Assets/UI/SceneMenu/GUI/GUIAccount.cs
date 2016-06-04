@@ -37,7 +37,7 @@ namespace SimpleTeam.GameOne.Scene
             ObjSignOut.SetActive(false);
             ObjChangePassword.SetActive(false);
         }
-        private void OpenWindow(MessageAccount.StateType state)
+        private void OpenWindow(MessageDataAccount.StateType state)
         {
             Sign.SetState(state);
             Sign.Clear();
@@ -45,19 +45,19 @@ namespace SimpleTeam.GameOne.Scene
         }
         public void OpenSignIn()
         {
-            OpenWindow(MessageAccount.StateType.SignIn);
+            OpenWindow(MessageDataAccount.StateType.SignIn);
         }
         public void OpenSignUp()
         {
-            OpenWindow(MessageAccount.StateType.SignUp);
+            OpenWindow(MessageDataAccount.StateType.SignUp);
         }
         public void OpenSignOut()
         {
-            OpenWindow(MessageAccount.StateType.SignOut);
+            OpenWindow(MessageDataAccount.StateType.SignOut);
         }
         public void OpenChangePassword()
         {
-            OpenWindow(MessageAccount.StateType.ChangePassword);
+            OpenWindow(MessageDataAccount.StateType.ChangePassword);
         }
 
     }

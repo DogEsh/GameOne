@@ -16,7 +16,7 @@ namespace SimpleTeam.BinarySerialization.DotNet
         }
 
 
-        public void CreatePacket(ref Packet packet, IMessage message)
+        public void CreatePacket(ref Packet packet, IMessageData message)
         {
             packet = null;
             using (MemoryStream stream = new MemoryStream())

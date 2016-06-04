@@ -24,22 +24,5 @@ namespace SimpleTeam.GameOne.Scene
         {
             _sceneMessage.SetMessage(message);
         }
-
-
-        //ISceneGameMessages
-        void SetMessage(MessageGamerCommand message)
-        {
-            throw new NotImplementedException();
-        }
-
-        void SetMessage(MessageGameState message)
-        {
-            throw new NotImplementedException();
-        }
-
-        void SetMessage(MessageGameMap message)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

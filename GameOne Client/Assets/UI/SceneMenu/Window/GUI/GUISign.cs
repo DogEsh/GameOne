@@ -15,7 +15,7 @@ namespace SimpleTeam.GameOne.Scene
         public SceneClientMenu Menu;
         public IMessageContainer _container = new MessageContainer();
 
-        private MessageAccount.StateType _state;
+        private MessageDataAccount.StateType _state;
 
         public GameObject ObjEmail;
         public GameObject ObjPassword;
@@ -44,28 +44,28 @@ namespace SimpleTeam.GameOne.Scene
             _container.Set(message);
         }
 
-        public void SetState(MessageAccount.StateType state)
+        public void SetState(MessageDataAccount.StateType state)
         {
-            if (state == MessageAccount.StateType.SignIn)
+            if (state == MessageDataAccount.StateType.SignIn)
             {
                 SetStateSignIn();
             }
-            else if (state == MessageAccount.StateType.SignUp)
+            else if (state == MessageDataAccount.StateType.SignUp)
             {
                 SetStateSignUp();
             }
-            else if (state == MessageAccount.StateType.SignOut)
+            else if (state == MessageDataAccount.StateType.SignOut)
             {
                 SetStateSignOut();
             }
-            else if (state == MessageAccount.StateType.ChangePassword)
+            else if (state == MessageDataAccount.StateType.ChangePassword)
             {
                 SetStateChangePassword();
             }
         }
         private void SetStateSignIn()
         {
-            _state = MessageAccount.StateType.SignIn;
+            _state = MessageDataAccount.StateType.SignIn;
             SetStateAllOff();
             ObjEmail.SetActive(true);
             ObjPassword.SetActive(true);
@@ -74,7 +74,7 @@ namespace SimpleTeam.GameOne.Scene
         }
         private void SetStateSignUp()
         {
-            _state = MessageAccount.StateType.SignUp;
+            _state = MessageDataAccount.StateType.SignUp;
             SetStateAllOff();
             ObjEmail.SetActive(true);
             ObjPassword.SetActive(true);
@@ -84,7 +84,7 @@ namespace SimpleTeam.GameOne.Scene
         }
         private void SetStateSignOut()
         {
-            _state = MessageAccount.StateType.SignOut;
+            _state = MessageDataAccount.StateType.SignOut;
             SetStateAllOff();
             BtnSign.SetState(_state);
             ObjSign.SetActive(true);
@@ -92,7 +92,7 @@ namespace SimpleTeam.GameOne.Scene
         }
         private void SetStateChangePassword()
         {
-            _state = MessageAccount.StateType.ChangePassword;
+            _state = MessageDataAccount.StateType.ChangePassword;
             SetStateAllOff();
             ObjPassword.SetActive(true);
             BtnSign.SetState(_state);
@@ -117,9 +117,11 @@ namespace SimpleTeam.GameOne.Scene
         }
         public void SendToServer()
         {
-            IMessage m = new MessageAccount(_state, InputEmail.text, InputPassword.text, InputNick.text);
+            IMessageData data = new MessageDataAccount(_state, InputEmail.text, InputPassword.text, InputNick.text);
             TextInfo.text = "Wait...";
             ObjInfo.SetActive(true);
+
+            IMessage m = new MessageRealization(data);
             ICommand c = new CommandSendMessageNetwork(m);
             IScenario s = Menu.GetScenario();
             s.Set(c);
@@ -127,7 +129,7 @@ namespace SimpleTeam.GameOne.Scene
         public void Update()
         {
             if (_container.IsEmpty) return;
-            MessageAccount m = _container.Get() as MessageAccount;
+            MessageDataAccount m = _container.Get().Data as MessageDataAccount;
 
             if (m.State == _state)
             {
@@ -144,11 +146,11 @@ namespace SimpleTeam.GameOne.Scene
                     TextInfo.text = "Error, try again";
                 }
             }
-            if (m.State == MessageAccount.StateType.SignIn)
+            if (m.State == MessageDataAccount.StateType.SignIn)
             {
                 Menu.SetStateSignIn(m.Success);
             }
-            else if(m.State == MessageAccount.StateType.SignOut)
+            else if(m.State == MessageDataAccount.StateType.SignOut)
             {
                 Menu.SetStateSignIn(!m.Success);
             }

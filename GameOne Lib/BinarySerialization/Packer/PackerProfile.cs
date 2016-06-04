@@ -15,9 +15,9 @@ namespace SimpleTeam.GameOne.BinarySerialization
                 return (MessageID)HelperMessageID.Profile;
             }
         }
-        public void CreatePacket(BinaryWriter writer, IMessage message)
+        public void CreatePacket(BinaryWriter writer, IMessageData message)
         {
-            MessageProfile m = (MessageProfile)message;
+            MessageDataProfile m = (MessageDataProfile)message;
             writer.Write(m.Nick);
             writer.Write(m.Honor);
         }

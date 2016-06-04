@@ -28,8 +28,7 @@ namespace SimpleTeam.GameOne.Network
 
         private NetworkUserProtocol _network = new NetworkUserProtocol();
 
-        private IUnpacker _unpacker = new Unpacker();
-        private IPacker _packer = new Packer();
+        private PacketConverter _converter;
 
         public NetworkClientMachine(IMessagesManagerNetwork messagesManager)
         {
@@ -39,6 +38,7 @@ namespace SimpleTeam.GameOne.Network
             _server.Socket.SendBufferSize = 1024;
             _server.Socket.ReceiveBufferSize = 1024;
             _messagesManager = messagesManager;
+            _converter = new PacketConverter(new Packer(), new Unpacker());
         }
 
         protected override bool Init()
@@ -87,9 +87,8 @@ namespace SimpleTeam.GameOne.Network
             {
                 IMessage m = _messagesManager.GetMessage();
                 if (m == null) break;
-                Packet p = null;
-                _packer.CreatePacket(ref p, m);
-                _server.PacketsSend.Enqueue(p);
+                m = new MessageRealization(m.Data, new MessageAddress(_server));
+                _converter.ConvertToSend(m);
             }
             _network.Send(_server);
         }
@@ -99,11 +98,11 @@ namespace SimpleTeam.GameOne.Network
             {
                 _network.Receive(_server);
                 IMessage m = null;
-                UnpackerState s =  _unpacker.CreateMessage(ref m, _server.PacketReceive);
+                UnpackerState s;
+                s = _converter.ConvertToReceive(ref m, _server);
                 if (s == UnpackerState.Ok)
                 {
                     _messagesManager.SetMessage(m);
-                    _server.PacketReceive.Clear();
                 }
                 else if (s == UnpackerState.NotReady) return;
                 else
@@ -111,10 +110,6 @@ namespace SimpleTeam.GameOne.Network
                     throw new System.SystemException("hoho");
                 }
             }
-        }
-        public IUserNetwork GetUser()
-        {
-            return _server;
         }
     }
 }

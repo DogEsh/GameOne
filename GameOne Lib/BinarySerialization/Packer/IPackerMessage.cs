@@ -7,6 +7,6 @@ namespace SimpleTeam.GameOne.BinarySerialization
 {
     public interface IPackerMessage : IMessageID
     {
-        void CreatePacket(BinaryWriter writer, IMessage message);
+        void CreatePacket(BinaryWriter writer, IMessageData message);
     }
 }

@@ -12,7 +12,7 @@ namespace SimpleTeam.Network
     */
     public class NetworkUserProtocol
     {
-        private NetworkParser _parser = new NetworkParser();
+        private NetworkStreamParser _parser = new NetworkStreamParser();
         public void Send(IUserNetwork user)
         {
             if (!user.Socket.Connected) return;

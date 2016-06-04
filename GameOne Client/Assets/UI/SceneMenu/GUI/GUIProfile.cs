@@ -37,7 +37,7 @@ namespace SimpleTeam.GameOne.Scene
         {
             if (!_container.IsEmpty)
             {
-                MessageProfile m = _container.Get() as MessageProfile;
+                MessageDataProfile m = _container.Get().Data as MessageDataProfile;
                 IUserProfile p = new UserProfile();
                 p.Nick = m.Nick;
                 UpdateProfile(p);

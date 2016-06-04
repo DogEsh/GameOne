@@ -15,15 +15,15 @@ namespace SimpleTeam.GameOne.BinarySerialization
                 return (MessageID)HelperMessageID.Account;
             }
         }
-        public void CreatePacket(BinaryWriter writer, IMessage message)
+        public void CreatePacket(BinaryWriter writer, IMessageData message)
         {
-            MessageAccount m = (MessageAccount)message;
+            MessageDataAccount d = (MessageDataAccount)message;
             //writer.Write(m.StateValue);
-            writer.Write(m.Success);
-            writer.Write((Byte)m.State);
-            writer.Write(m.Email);
-            writer.Write(m.Password);
-            writer.Write(m.Nick);
+            writer.Write(d.Success);
+            writer.Write((Byte)d.State);
+            writer.Write(d.Email);
+            writer.Write(d.Password);
+            writer.Write(d.Nick);
         }
         
     }

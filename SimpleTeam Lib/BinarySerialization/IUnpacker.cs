@@ -14,6 +14,6 @@ namespace SimpleTeam.BinarySerialization
     }
     public interface IUnpacker
     {
-        UnpackerState CreateMessage(ref IMessage message, Packet packet);
+        UnpackerState CreateMessageData(ref IMessageData message, Packet packet);
     }
 }

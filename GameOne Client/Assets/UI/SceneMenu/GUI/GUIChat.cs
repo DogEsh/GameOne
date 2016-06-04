@@ -44,15 +44,16 @@ namespace SimpleTeam.GameOne.Scene
         {
             if (!_container.IsEmpty)
             {
-                MessageChat m = _container.Get() as MessageChat;
+                MessageDataChat m = _container.Get().Data as MessageDataChat;
                 OutputChat.text += "\n" + m.Line;
             }
         }
         public void SendToChat()
         {
             //OutputChat.text += "\n" + InputChat.text;
-            IMessage msg = new MessageChat(InputChat.text);
+            IMessageData data = new MessageDataChat(InputChat.text);
             InputChat.text = string.Empty;
+            IMessage msg = new MessageRealization(data);
             ICommand cmd = new CommandSendMessageNetwork(msg);
             Menu.GetScenario().Set(cmd);
         }

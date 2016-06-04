@@ -27,13 +27,13 @@ namespace SimpleTeam.GameOne.Network
 
         private NetworkUserProtocol _network = new NetworkUserProtocol();
 
-        private IUnpacker _unpacker = new Unpacker();
-        private IPacker _packer = new Packer();
+        private PacketConverter _converter;
 
         public NetworkServerMachine(IMessagesManagerNetwork messagesManager)
         {
             _messagesManager = messagesManager;
             _clients = new List<IUserNetwork>();
+            _converter = new PacketConverter(new Packer(), new Unpacker());
         }
         protected override bool Init()
         {
@@ -74,23 +74,11 @@ namespace SimpleTeam.GameOne.Network
             {
                 IMessage m = _messagesManager.GetMessage();
                 if (m == null) break;
-                Packet p = null;
-                _packer.CreatePacket(ref p, m);
-                MessageBase mm = (MessageBase)m;
-                if (mm.Users.Count != 0)
+                if (m.Address.Users.Count == 0)
                 {
-                    foreach (IUserNetwork user in mm.Users)
-                    {
-                        user.PacketsSend.Enqueue(p);
-                    }
+                    m = new MessageRealization(m.Data, new MessageAddress(_clients));
                 }
-                else
-                {
-                    foreach (IUserNetwork user in _clients)
-                    {
-                        user.PacketsSend.Enqueue(p);
-                    }
-                }
+                _converter.ConvertToSend(m);
             }
 
             foreach (IUserNetwork user in _clients)
@@ -108,13 +96,10 @@ namespace SimpleTeam.GameOne.Network
                 {
                     _network.Receive(user);
                     IMessage m = null;
-                    Packet p = user.PacketReceive;
-                    UnpackerState s = _unpacker.CreateMessage(ref m, p);
+                    UnpackerState s = _converter.ConvertToReceive(ref m, user);
                     if (s == UnpackerState.Ok)
                     {
-                        ((MessageBase)m).Users.Add(user);
                         _messagesManager.SetMessage(m);
-                        user.PacketReceive.Clear();
                     }
                     else if (s == UnpackerState.NotReady) break;
                     else

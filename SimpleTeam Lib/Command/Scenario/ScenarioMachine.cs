@@ -37,7 +37,8 @@ namespace SimpleTeam.Command.Scenario
 
         protected override bool DoAnything()
         {
-            foreach(IScenario s in _scenarios)
+            Thread.Sleep(100);
+            foreach (IScenario s in _scenarios)
             {
                 while (true)
                 {
@@ -46,7 +47,7 @@ namespace SimpleTeam.Command.Scenario
                     c.Do(_parameters);
                 }
             }
-            Thread.Sleep(100);
+            
             return true;
         }
     }

@@ -18,7 +18,7 @@ namespace SimpleTeam.GameOne.BinarySerialization
         {
             _register = new RegisterUnpacker();
         }
-        public UnpackerState CreateMessage(ref IMessage message, Packet packet)
+        public UnpackerState CreateMessageData(ref IMessageData message, Packet packet)
         {
             message = null;
             if (!packet.IsReady) return UnpackerState.NotReady;
@@ -31,7 +31,7 @@ namespace SimpleTeam.GameOne.BinarySerialization
                     MessageID type = reader.ReadByte();
                     IUnpackerMessage unpacker = _register.Find(type);
                     if (unpacker == null) return UnpackerState.NotFoundType;
-                    return unpacker.CreateMessage(ref message, reader, packet.Size);
+                    return unpacker.CreateMessageData(ref message, reader, packet.Size);
                 }
             }
         }

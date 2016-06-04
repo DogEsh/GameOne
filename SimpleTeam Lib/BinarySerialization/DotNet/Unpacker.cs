@@ -20,7 +20,7 @@ namespace SimpleTeam.BinarySerialization.DotNet
         }
 
 
-        public UnpackerState CreateMessage(ref IMessage message, Packet packet)
+        public UnpackerState CreateMessageData(ref IMessageData message, Packet packet)
         {
             if (!packet.IsReady) return UnpackerState.NotReady;
             message = null;
@@ -28,7 +28,7 @@ namespace SimpleTeam.BinarySerialization.DotNet
             {
                 try
                 {
-                    message = formatter.Deserialize(stream) as IMessage;
+                    message = formatter.Deserialize(stream) as IMessageData;
                 }
                 catch (Exception ex)
                 {
@@ -36,7 +36,6 @@ namespace SimpleTeam.BinarySerialization.DotNet
                     return UnpackerState.NotParse;
                 }
             }
-            ((MessageBase)message).Users = new List<IUserNetwork>();
             return UnpackerState.Ok;
             
         }

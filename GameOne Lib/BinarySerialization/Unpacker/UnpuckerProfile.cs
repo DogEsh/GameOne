@@ -18,13 +18,13 @@ namespace SimpleTeam.GameOne.BinarySerialization
                 return (MessageID)HelperMessageID.Profile;
             }
         }
-        public UnpackerState CreateMessage(ref IMessage message, BinaryReader reader, SizePacket size)
+        public UnpackerState CreateMessageData(ref IMessageData message, BinaryReader reader, SizePacket size)
         {
             String nick = reader.ReadString();
             if (reader.BaseStream.Position >= size) return UnpackerState.SizeOut;
             UInt32 honor = reader.ReadUInt32();
             if (reader.BaseStream.Position != size) return UnpackerState.SizeOut;
-            message = new MessageProfile(nick, honor);
+            message = new MessageDataProfile(nick, honor);
             return UnpackerState.Ok;
         }
 

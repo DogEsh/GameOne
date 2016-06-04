@@ -18,11 +18,11 @@ namespace SimpleTeam.GameOne.BinarySerialization
                 return (MessageID)HelperMessageID.Chat;
             }
         }
-        public UnpackerState CreateMessage(ref IMessage message, BinaryReader reader, SizePacket size)
+        public UnpackerState CreateMessageData(ref IMessageData message, BinaryReader reader, SizePacket size)
         {
             String line = reader.ReadString();
             if (reader.BaseStream.Position != size) return UnpackerState.SizeOut;
-            message = new MessageChat(line);
+            message = new MessageDataChat(line);
             return UnpackerState.Ok;
         }
 

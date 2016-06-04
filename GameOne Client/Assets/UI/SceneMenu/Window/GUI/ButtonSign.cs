@@ -9,21 +9,21 @@ namespace SimpleTeam.GameOne.Scene
     {
         public Text TextButton;
 
-        public void SetState(MessageAccount.StateType state)
+        public void SetState(MessageDataAccount.StateType state)
         {
-            if (state == MessageAccount.StateType.SignIn)
+            if (state == MessageDataAccount.StateType.SignIn)
             {
                 TextButton.text = "SignIn";
             }
-            else if (state == MessageAccount.StateType.SignUp)
+            else if (state == MessageDataAccount.StateType.SignUp)
             {
                 TextButton.text = "SignUp";
             }
-            else if (state == MessageAccount.StateType.SignOut)
+            else if (state == MessageDataAccount.StateType.SignOut)
             {
                 TextButton.text = "SignOut";
             }
-            else if (state == MessageAccount.StateType.ChangePassword)
+            else if (state == MessageDataAccount.StateType.ChangePassword)
             {
                 TextButton.text = "Change";
             }
